@@ -37,4 +37,9 @@ class InstructorTestCase extends CakeTestCase {
 		parent::tearDown();
 	}
 
+
+	public function testFindAvailalbe() {
+		$available = $this->Instructor->find('available', array('course' => 'course-1'));
+		$this->assertEqual(array('user-2', 'user-3'), array_keys($available));
+	}
 }

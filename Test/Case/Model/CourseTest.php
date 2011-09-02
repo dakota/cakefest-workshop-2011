@@ -63,4 +63,5 @@ class CourseTestCase extends CakeTestCase {
 		$course = $this->Course->read(null, 'course-2');
 		$this->assertEquals(array('user-1', 'user-3'), Set::extract('/Instructor/user_id', $course));
 	}
+
 }
